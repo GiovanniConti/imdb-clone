@@ -20,17 +20,9 @@
 
 <body>
   <div id="app">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <trailers-carousel :movie-list="{{json_encode($movieList)}}"></trailers-carousel>
-        </div>
-        <div class="col-6 col-md-4">
-          <movies-list :movie-list="{{json_encode($movieList)}}"></movies-list>
-        </div>
-      </div>
-    </div>
+  <div class="container">
     <hero-slider :movie-list="{{json_encode($movieList)}}"></hero-slider>
+  </div>
   </div>
 </body>
 

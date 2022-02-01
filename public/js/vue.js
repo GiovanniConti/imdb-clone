@@ -14150,7 +14150,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/giovanniconti/Desktop/Boolean Course/Boolean #43/imdb-clone/resources/js/vue.js */"./resources/js/vue.js");
+module.exports = __webpack_require__(/*! /Users/francesco/Code/Boolean/imdb-clone/resources/js/vue.js */"./resources/js/vue.js");
 
 
 /***/ })
