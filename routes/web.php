@@ -1,5 +1,6 @@
 <?php
 
+use App\Movie;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  $movieList = Movie::all();
+  return view('welcome', [
+    'movieList' => $movieList
+  ]);
 });
 
 Auth::routes();
