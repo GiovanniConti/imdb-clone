@@ -14,9 +14,7 @@ class CreateMovieCategoryTable extends Migration
     public function up()
     {
         Schema::create('movie_category', function (Blueprint $table) {
-
             $table->foreignId('movie_id')->constrained();
-
             $table->foreignId('category_id')->constrained();
         });
     }
