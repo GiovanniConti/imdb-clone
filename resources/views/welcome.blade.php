@@ -20,9 +20,31 @@
 
 <body>
   <div id="app">
-  <div class="container">
-    <hero-slider :movie-list="{{json_encode($movieList)}}"></hero-slider>
-  </div>
+    <div class="container">
+      <h3 class="my-3">Filtri</h3>
+      <form class="mb-5" action="" method="get">
+  
+        <select name='categories[]' multiple>
+          @foreach($categoryList as $category)
+            <option value='{{$category->id}}' {{ Request::query('categories') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+          @endforeach
+        </select>
+        
+        <button>Invia</button>
+      </form>
+
+      <ul>
+      @foreach ($filteredData as $data)
+        <li>
+          {{$data->title}}
+        </li>
+      @endforeach
+      </ul>
+
+      <hero-slider :movie-list="{{json_encode($movieList)}}"></hero-slider>
+    </div>
+
+
   </div>
 </body>
 
